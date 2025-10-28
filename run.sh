@@ -80,6 +80,7 @@ export VM_NFS_CMD
 export VM_LOGIN_TAG
 export VM_OCR
 export VM_DISK
+export VM_NIC
 export VM_ARCH
 
 ##########################################################
