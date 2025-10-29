@@ -242,7 +242,7 @@ startVM() {
 rsyncToVM() {
   _pwd="$PWD"
   cd "$_oldPWD"
-  rsync -avrtopg -e 'ssh -o MACs=umac-64-etm@openssh.com' --exclude _actions --exclude _PipelineMapping  $HOME/work/  $osname:work
+  rsync -artopg -e 'ssh -o MACs=umac-64-etm@openssh.com' --exclude _actions --exclude _PipelineMapping  $HOME/work/  $osname:work
   cd "$_pwd"
 }
 
@@ -250,7 +250,7 @@ rsyncToVM() {
 rsyncBackFromVM() {
   _pwd="$PWD"
   cd "$_oldPWD"
-  rsync -vrtopg   -e 'ssh -o MACs=umac-64-etm@openssh.com' $osname:work/ $HOME/work
+  rsync -rtopg -e 'ssh -o MACs=umac-64-etm@openssh.com' $osname:work/ $HOME/work
   cd "$_pwd"
 }
 
